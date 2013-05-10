@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  GetTogether
+//  RevealKit
 //
 //  Created by mac on 5/9/13.
 //  Copyright (c) 2013 AlvinLui. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
 
 @implementation AppDelegate
@@ -23,9 +22,10 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    _viewController = [[StartUpAnimationViewController alloc] initWithNibName:@"StartUpAnimationViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
